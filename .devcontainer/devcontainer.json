@@ -1,6 +1,9 @@
 {
    // "build": { "dockerfile": "Dockerfile" },
     "image": "mcr.microsoft.com/devcontainers/base:bookworm",
+    "remoteEnv": {
+        "OLLAMA_MODEL": "llama3.2:3b"
+    },
     "hostRequirements": {
        "cpus": 4,
        "memory": "16gb",
@@ -52,5 +55,5 @@
         }
     },
     "postCreateCommand": "bash -i scripts/pysetup.sh py_env && bash -i scripts/startup_ollama.sh",
-    "postAttachCommand": "ollama serve &"
+    "postAttachCommand": "bash scripts/startOllama.sh"
 }
