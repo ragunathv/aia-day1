@@ -1,7 +1,7 @@
 # Enterprise AI Accelerator
 ## Day 1 - Models and Retrieval Augmented Generation (RAG)
 ## Session labs 
-## Revision 1.2 - 11/28/25
+## Revision 1.4 - 03/17/25
 
 **Follow the startup instructions in the README.md file IF NOT ALREADY DONE!**
 
@@ -115,7 +115,18 @@ code tokenizer.py
 
 <br><br>
 
-4. Now let's switch back to the codespace and, in the terminal, run the *tokenizer* program with the *bert-base-uncased* model. Enter the command below. This will download some of the files you saw on the *Files* tab for the model in HuggingFace.
+4. Now let's switch back to the codespace and, in the terminal, set up your Hugging Face token for this terminal and any future ones. Run the first command below, paste in the token you setup as part of the README.md steps and hit Enter.  You can then verify that your token is setup correctly with the second command.
+
+```
+read -p "HF Token: " HF_TOKEN && export HF_TOKEN && grep -qxF "export HF_TOKEN=$HF_TOKEN" ~/.bashrc || echo "export HF_TOKEN=$HF_TOKEN" >> ~/.bashrc
+
+echo $HF_TOKEN
+```
+
+<br><br>
+  
+  
+5. Run the *tokenizer* program with the *bert-base-uncased* model. Enter the command below. This will download some of the files you saw on the *Files* tab for the model in HuggingFace.
 
 ```
 python tokenizer.py bert-base-uncased
@@ -123,7 +134,7 @@ python tokenizer.py bert-base-uncased
 
 <br><br>
 
-5. After the program starts, you will be at a prompt to *Enter text*. Enter in some text like the following to see how it will be tokenized.
+6. After the program starts, you will be at a prompt to *Enter text*. Enter in some text like the following to see how it will be tokenized.
 
 ```
 This is sample text for tokenization and text for embeddings.
@@ -133,13 +144,13 @@ This is sample text for tokenization and text for embeddings.
 
 <br><br>
 
-6. After you enter this, you'll see the various subword tokens that were extracted from the text you entered. And you'll also see the ids for the tokens stored in the model that matched the subwords.
+7. After you enter this, you'll see the various subword tokens that were extracted from the text you entered. And you'll also see the ids for the tokens stored in the model that matched the subwords.
 
 ![tokenization output](./images/aia-1-13.png?raw=true "tokenization output")
 
 <br><br>
 
-7. Next, you can try out some other models by repeating steps 4 - 6 for other tokenizers like the following. (You can use the same text string or different ones. Notice how the text is broken down depending on the model and also the meta-characters.)
+8. Next, you can try out some other models by repeating steps 4 - 6 for other tokenizers like the following. (You can use the same text string or different ones. Notice how the text is broken down depending on the model and also the meta-characters.)
 ```
 python tokenizer.py roberta-base
 python tokenizer.py gpt2
@@ -148,7 +159,7 @@ python tokenizer.py xlnet-large-cased
 
 <br><br>
 
-8. (Optional) If you finish early and want more to do, you can look up the models from step 7 on huggingface.co/models.
+9. (Optional) If you finish early and want more to do, you can look up the models from step 7 on huggingface.co/models.
 
 <br>  
 <p align="center">
