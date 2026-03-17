@@ -1,7 +1,7 @@
 # Enterprise AI Accelerator
 ## Day 1 - Models and Retrieval Augmented Generation (RAG)
 ## Session labs 
-## Revision 1.5 - 03/17/25
+## Revision 1.6 - 03/17/25
 
 **Follow the startup instructions in the README.md file IF NOT ALREADY DONE!**
 
@@ -512,11 +512,13 @@ python ../tools/index_pdfs.py
 
 **Purpose: In this lab, we'll create a complete RAG (Retrieval-Augmented Generation) system that retrieves relevant context from our vector database and uses an LLM to generate intelligent, grounded answers.**
 
-1. You should still be in the *rag* subdirectory. We're going to build a TRUE RAG system that combines vector search with LLM generation. This is different from Lab 6 - instead of just finding similar chunks, we'll use those chunks as context for an LLM to generate complete answers. First, we need to bring down a smaller model to use with these labs. Use the Ollama command below:
+1. You should still be in the *rag* subdirectory. We're going to build a TRUE RAG system that combines vector search with LLM generation. This is different from Lab 6 - instead of just finding similar chunks, we'll use those chunks as context for an LLM to generate complete answers. We'll use a smaller model with this so everything fits.  We should already have the smaller *llama3.2:1b* model downloaded. You can verify that by running the command below and making sure you see `llama3.2:1b` in the list.
 
 ```
-ollama pull llama3.2:1b
+ollama list
 ```
+
+![small llama model](./images/aia-1-62.png?raw=true "small llama model")
 
 <br><br>
 
