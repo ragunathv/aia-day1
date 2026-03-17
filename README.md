@@ -39,7 +39,7 @@ When you see this, just hit *Enter* to get to a prompt.
 
 **4. Set up your HuggingFace API token.**
 
-The RAG agent uses HuggingFace's Inference API to generate LLM responses. You'll need a free API token:
+For faster responses with Hugging Face, we can use a free API token:
 
 A. Go to [https://huggingface.co](https://huggingface.co) and log in if you already have an account. If you need to create an account, click the *Sign Up* button or visit [https://huggingface.co/join](https://huggingface.co/join)
 
