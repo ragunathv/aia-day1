@@ -1,7 +1,7 @@
 # Enterprise AI Accelerator
 ## Day 1 - Models and Retrieval Augmented Generation (RAG)
 ## Session labs 
-## Revision 1.4 - 03/17/25
+## Revision 1.5 - 03/17/25
 
 **Follow the startup instructions in the README.md file IF NOT ALREADY DONE!**
 
@@ -179,7 +179,7 @@ code vectors.py
 ```
 <br><br>
 
-2. Let's run the program. As we did for the tokenizer example, we'll pass in a model to use. We'll also pass in a second argument which is the number of dimensions from the vector for each term to show. Run the program with the command below. You can wait to enter terms until the next step.
+2. Let's run the program. As we did for the tokenizer example, we'll pass in a model to use. We'll also pass in a second argument which is the number of dimensions from the vector for each term to show. Run the program with the command below. You can wait to enter terms until the next step. (Ignore any notifications labeled "UNEXPECTED".)
 
 
 ```
@@ -226,7 +226,7 @@ python vectors.py bert-base-cased 768
 <br><br>
 
 
-8. You can actually see where these mappings are stored if you look at the model on Hugging Face. For instance, for the *bert-base-cased* model, you can go to https://huggingface.co and search for bert-base-cased. Select the entry for google-bert/bert-base-cased. (Make sure you pick the one with that name.)
+8. You can actually see where these mappings are stored if you look at the model on Hugging Face. For instance, for the *bert-base-cased* model, you can go to https://huggingface.co and search for *google-bert/bert-base-cased*. Select the entry for that one. (Make sure you pick the one with that name.)
 
 ![finding model](./images/aia-1-19.png?raw=true "finding model")
 
