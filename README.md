@@ -24,7 +24,8 @@ Click here ➡️  [![Open in GitHub Codespaces](https://github.com/codespaces/b
 
 This will run for a long time (up to 10 minutes) while it gets everything ready.
 
-After the initial startup, it will run a script to setup the python environment and install needed python pieces. This will take several more minutes to run. It will look like this while this is running.
+After the initial startup, it will run a script to setup the python environment and install needed python pieces. This will take several more minutes to run. It will look like this while this is running. 
+(**While you wait on this to complete, you can proceed with step 4 to get your Hugging Face token.**)
 
 ![Final prep](./images/aia-1-2.png?raw=true "Final prep")
 
@@ -36,7 +37,53 @@ When you see this, just hit *Enter* to get to a prompt.
 
 <br><br>
 
-**4. Open up the *labs.md* file so you can follow along with the labs.**
+**4. Set up your HuggingFace API token.**
+
+The RAG agent uses HuggingFace's Inference API to generate LLM responses. You'll need a free API token:
+
+A. Go to [https://huggingface.co](https://huggingface.co) and log in if you already have an account. If you need to create an account, click the *Sign Up* button or visit [https://huggingface.co/join](https://huggingface.co/join)
+
+![HF login](./images/aia-3-19.png?raw=true "HF login")
+
+<br>
+   
+B. Navigate to [https://huggingface.co/settings/tokens](https://huggingface.co/settings/tokens).  Click on *+ Create new token*.
+
+![Get token](./images/aia-3-20.png?raw=true "Get token")
+
+<br>
+
+C. Select **Write** for the token type and provide a name.
+
+![Read token](./images/ae80.png?raw=true "Read token")
+
+<br>
+   
+D. Click on the *Create token* button and copy the token (it starts with `hf_`). Save it somewhere.
+
+![Save/copy token](./images/ae81.png?raw=true "Save/copy token")
+
+<br>
+
+E. For all runs of agents in the labs, make sure the token is set in your terminal before running the agent:
+
+```bash
+export HF_TOKEN="hf_your_token_here"
+```
+
+<br>
+
+F. Alternatively, to make this permanent for your codespace session, add it to your shell profile:
+
+```bash
+echo 'export HF_TOKEN="hf_your_token_here"' >> ~/.bashrc
+source ~/.bashrc
+```
+
+<br><br>
+
+
+**5. Open up the *labs.md* file so you can follow along with the labs.**
 You can either open it in a separate browser instance or open it in the codespace. 
 
 ![Opening labs](./images/aia-0-4.png?raw=true "Opening labs")
