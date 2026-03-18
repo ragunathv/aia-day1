@@ -633,19 +633,21 @@ code rag_code.py
 
 2. Find line 465 where it says `result = rag.query(question, max_context_chunks=3)`. This controls how many chunks are retrieved. Try changing `3` to `1`, save, and run:
 
+![Mod](./images/aia-1-49.png?raw=true "Mod")
+
 ```
 python rag_code.py
 ```
 
 Ask: `How can I return a product?`
 
-The answer may be ok, or it may be incomplete, without enough context. Type `quit` to exit.
+The answer may be ok, or it may be incomplete, without enough context. But note that it only used one source. Type `quit` to exit.
 
-![Mod](./images/aia-1-49.png?raw=true "Mod")
+![Single source](./images/aia-1-66.png?raw=true "Single source")
 
 <br><br>
 
-3. Change `max_context_chunks` to `10`, save, and run again with the same question. Now there may be too much context - it may be confusing or overwhelming. 
+3. Change `max_context_chunks` to `10`, and save *rag_code.py*. Run again with the same question. Now there may be too much context - it may be confusing or overwhelming. It might also time out trying to reference so many sources.
 
 ![Mod](./images/aia-1-51.png?raw=true "Mod")
 
@@ -670,11 +672,11 @@ Type `exit`. **Change it back to `3` (the sweet spot) and save it.**
 python rag_code.py
 ```
 
-Ask twice: `What are the shipping costs?`
+Ask twice: `Imagine you're a customer service representative explaining the return policy over the phone to a frustrated customer. How would you describe it?`
 
 The answers should be nearly identical - temperature 0.0 gives consistent results. Type `exit`.
 
-![Low temperature setting](./images/aia-1-59.png?raw=true "Low temperature setting")
+![Low temperature setting](./images/aia-1-69.png?raw=true "Low temperature setting")
 
 <br><br>
 
@@ -686,7 +688,9 @@ The answers should be nearly identical - temperature 0.0 gives consistent result
 
 <br>
 
-![High temperature output](./images/aia-1-56.png?raw=true "High temperature output")
+![High temperature output](./images/aia-1-68.png?raw=true "High temperature output")
+
+![High temperature output](./images/aia-1-70.png?raw=true "High temperature output")
 
 <br>
 
