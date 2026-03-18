@@ -680,7 +680,7 @@ The answers should be nearly identical - temperature 0.0 gives consistent result
 
 <br><br>
 
-6. Change temperature to `1.7` (very creative), save, and run again. Ask the same question twice. Notice the answers may vary quite a bit more - different wording, different order, and not as *professional*. This is less predictable. Type `exit` and change temperature back to `0.3`.
+6. Change temperature to `1.7` (very creative), save, and run again. Ask the same question twice. Notice the answers may vary quite a bit more - different wording, different order, and not as *professional*. This is less predictable. 
 
 <br>
 
