@@ -27,11 +27,11 @@ This will run for a long time (up to 10 minutes) while it gets everything ready.
 After the initial startup, it will run a script to setup the python environment and install needed python pieces. This will take several more minutes to run. It will look like this while this is running. 
 (**While you wait on this to complete, you can proceed with step 4 to get your Hugging Face token.**)
 
-![Final prep](./images/aia-1-63.png?raw=true "Final prep")
+![Final prep](./images/aia-1-64.png?raw=true "Final prep")
 
 The codespace is ready to use when you see a prompt like the one shown below in its terminal.
 
-![Ready to use](./images/aia-1-64.png?raw=true "Ready to use")
+![Ready to use](./images/aia-1-63.png?raw=true "Ready to use")
 
 When you see this, just hit *Enter* to get to a prompt.
 
