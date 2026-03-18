@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 
 PYTHON_ENV=$1
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+WORKSPACE_DIR="$(cd "$SCRIPT_DIR/.." && pwd)"
 
 if [ -d "/opt/py_env" ]; then
     # Copy pre-built venv from Docker image and fix paths
@@ -16,7 +18,7 @@ else
     if [ -f "./requirements.txt" ]; then
         pip3 install -r "./requirements.txt"
     else
-        pip3 install -r "/workspaces/ai-3in1/requirements/requirements.txt"
+        pip3 install -r "$WORKSPACE_DIR/requirements/requirements.txt"
     fi
 fi
 
@@ -26,3 +28,4 @@ fi
 
 export PATH=./$PYTHON_ENV/bin:$PATH
 grep -qxF "source $(pwd)/$PYTHON_ENV/bin/activate" ~/.bashrc || echo "source $(pwd)/$PYTHON_ENV/bin/activate" >> ~/.bashrc
+
