@@ -71,11 +71,31 @@ except ImportError:
     exit(1)
 
 # ───────────────────── logging setup ───────────────────────────────
+# Quiet down noisy HTTP/requests logging from Hugging Face and related libs.
+# Keep this script's own INFO-level progress messages.
 logging.basicConfig(
-    level=logging.INFO,
+    level=logging.WARNING,
     format='%(asctime)s - %(levelname)s - %(message)s'
 )
+
 logger = logging.getLogger(__name__)
+logger.setLevel(logging.INFO)
+
+try:
+    from huggingface_hub.utils import logging as hf_logging
+    hf_logging.set_verbosity_warning()
+except Exception:
+    pass
+
+try:
+    from transformers import logging as transformers_logging
+    transformers_logging.set_verbosity_warning()
+except Exception:
+    pass
+
+# httpx is used by Hugging Face to download model files; it logs each request at INFO.
+# Silence those to keep output focused on indexing progress.
+logging.getLogger("httpx").setLevel(logging.WARNING)
 
 # ╔════════════════════════════════════════════════════════════════╗
 # 1.  Configuration / constants                                    ║
@@ -719,3 +739,4 @@ Examples:
 
 if __name__ == "__main__":
     main()
+
