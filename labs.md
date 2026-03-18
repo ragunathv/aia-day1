@@ -1,7 +1,7 @@
 # Enterprise AI Accelerator
 ## Day 1 - Models and Retrieval Augmented Generation (RAG)
 ## Session labs 
-## Revision 1.6 - 03/17/25
+## Revision 1.7 - 03/17/25
 
 **Follow the startup instructions in the README.md file IF NOT ALREADY DONE!**
 
@@ -512,17 +512,7 @@ python ../tools/index_pdfs.py
 
 **Purpose: In this lab, we'll create a complete RAG (Retrieval-Augmented Generation) system that retrieves relevant context from our vector database and uses an LLM to generate intelligent, grounded answers.**
 
-1. You should still be in the *rag* subdirectory. We're going to build a TRUE RAG system that combines vector search with LLM generation. This is different from Lab 6 - instead of just finding similar chunks, we'll use those chunks as context for an LLM to generate complete answers. We'll use a smaller model with this so everything fits.  We should already have the smaller *llama3.2:1b* model downloaded. You can verify that by running the command below and making sure you see `llama3.2:1b` in the list.
-
-```
-ollama list
-```
-
-![small llama model](./images/aia-1-62.png?raw=true "small llama model")
-
-<br><br>
-
-2. Now let's examine our complete RAG implementation. We have a completed version and a skeleton version. Use the diff command to see the differences:
+1. Let's examine our complete RAG implementation. We have a completed version and a skeleton version. Use the diff command to see the differences:
 
 ```
 code -d ../extra/rag_complete.txt rag_code.py
@@ -532,7 +522,7 @@ code -d ../extra/rag_complete.txt rag_code.py
 
 <br><br>
 
-3. Once you have the diff view open, take a moment to look at the structure in the complete version on the left. Notice the three main methods: `retrieve()` for finding chunks, `build_prompt()` for augmenting with context, and `generate()` for calling the LLM. These are the three steps of RAG.
+2. Once you have the diff view open, take a moment to look at the structure in the complete version on the left. Notice the three main methods: `retrieve()` for finding chunks, `build_prompt()` for augmenting with context, and `generate()` for calling the LLM. These are the three steps of RAG.
 
 - Lines 95-157: `retrieve()` - semantic search in ChromaDB
 - Lines 159-209: `build_prompt()` - combining context with the question
@@ -540,19 +530,19 @@ code -d ../extra/rag_complete.txt rag_code.py
 
 <br><br>
 
-4. Now, as you've done before, merge the code segments from the complete file (left side) into the skeleton file (right side) by clicking the arrow pointing right in the middle bar for each difference. Start with the comments section at the top, then work your way down through the class methods.
+3. Now, as you've done before, merge the code segments from the complete file (left side) into the skeleton file (right side) by clicking the arrow pointing right in the middle bar for each difference. Start with the comments section at the top, then work your way down through the class methods.
 
 ![Merge](./images/aia-1-43.png?raw=true "Merge")
 
 <br><br>
 
-5. After merging all the changes, double-check that there are no remaining diffs (red blocks on the side). Then close the diff view by clicking the "X" in the tab. 
+4. After merging all the changes, double-check that there are no remaining diffs (red blocks on the side). Then close the diff view by clicking the "X" in the tab. 
 
 ![Completed](./images/aia-1-44.png?raw=true "Completed")
 
 <br><br>
 
-6. Now let's run our complete RAG system:
+5. Now let's run our complete RAG system:
 
 ```
 python rag_code.py
@@ -562,13 +552,13 @@ The system will connect to the vector database we created in Lab 6 and check if 
 
 <br><br>
 
-7. You should see knowledge base statistics showing how many chunks are indexed, and a check that Ollama is running with the llama3.2:1b model. If you see any errors about Ollama not running, check that with "ollama list".  If Ollama doesn't respond, try "ollama serve &".
+6. You should see knowledge base statistics showing how many chunks are indexed, and a check that Ollama is running with the llama3.2:1b model. If you see any errors about Ollama not running, check that with "ollama list".  If Ollama doesn't respond, try "ollama serve &".
 
 ![Running](./images/aia-1-45.png?raw=true "Running")
 
 <br><br>
 
-8. Now you'll be at a prompt to ask questions. Try this first question:
+7. Now you'll be at a prompt to ask questions. Try this first question:
 
 ```
 How can I return a product?
@@ -581,13 +571,13 @@ Watch what happens - the system will show you the three RAG steps in the logs:
 
 <br><br>
 
-9. After a few seconds, you'll see an ANSWER section with the LLM-generated response, followed by a SOURCES section showing which PDFs and pages were used. Notice how the answer is much more complete and natural than just showing search results.
+8. After a few seconds, you'll see an ANSWER section with the LLM-generated response, followed by a SOURCES section showing which PDFs and pages were used. Notice how the answer is much more complete and natural than just showing search results.
 
 ![Answer](./images/aia-1-47.png?raw=true "Answer")
 
 <br><br>
 
-10. Try a few more questions to see RAG in action:
+9. Try a few more questions to see RAG in action:
 
 ```
 What are the shipping costs?
@@ -601,7 +591,7 @@ For each question, notice how the system retrieves relevant chunks and generates
 
 <br><br>
 
-11. Now try asking a question that's NOT in the PDFs to see how RAG handles it:
+10. Now try asking a question that's NOT in the PDFs to see how RAG handles it:
 
 ```
 What's the CEO's favorite color?
@@ -613,7 +603,7 @@ Notice how the system should say it doesn't have that information (rather than m
 
 <br><br>
 
-12. When you're done experimenting, type `quit` to exit the system.
+11. When you're done experimenting, type `quit` to exit the system.
 
 <br><br>
 
