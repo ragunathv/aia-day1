@@ -37,7 +37,15 @@ When you see this, just hit *Enter* to get to a prompt.
 
 <br><br>
 
-**4. Set up your HuggingFace API token.**
+**4. Warm-up the models in the codespace by running the warmup script.**
+
+```
+python scripts/warmup.py
+```
+
+<br><br>
+
+**5. Set up your HuggingFace API token.**
 
 For faster responses with Hugging Face, we can use a free API token:
 
@@ -83,7 +91,7 @@ source ~/.bashrc
 <br><br>
 
 
-**5. Open up the *labs.md* file so you can follow along with the labs.**
+**6. Open up the *labs.md* file so you can follow along with the labs.**
 You can either open it in a separate browser instance or open it in the codespace. 
 
 ![Opening labs](./images/aia-0-4.png?raw=true "Opening labs")
@@ -93,6 +101,7 @@ You can either open it in a separate browser instance or open it in the codespac
 **Now, you are ready for the labs!**
 
 <br><br>
+
 
 
 
