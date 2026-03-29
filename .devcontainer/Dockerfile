@@ -13,7 +13,8 @@ RUN python3 -m venv /opt/py_env && \
     /opt/py_env/bin/pip install --no-cache-dir \
         torch torchvision torchaudio \
         --index-url https://download.pytorch.org/whl/cpu && \
-    /opt/py_env/bin/pip install --no-cache-dir -r /tmp/requirements.txt && \
+    grep -ivE '^torch(vision|audio)?>=' /tmp/requirements.txt > /tmp/requirements_filtered.txt && \
+    /opt/py_env/bin/pip install --no-cache-dir -r /tmp/requirements_filtered.txt && \
     /opt/py_env/bin/pip uninstall -y \
         triton nvidia-cublas-cu12 nvidia-cuda-cupti-cu12 \
         nvidia-cuda-nvrtc-cu12 nvidia-cuda-runtime-cu12 \
