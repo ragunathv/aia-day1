@@ -60,7 +60,24 @@ Alternatively, you can install the extension from it [page on the Visual Studio 
 
 <br><br>
 
-**5. Use Git to clone this repository down to your machine with a command like the following.**
+
+**5. Click on the button below to open the code from this repository as a development container in your local VS Code instance.**  
+
+If this doesn't work, you can do the alternative steps below.
+
+<br>
+
+&emsp;&emsp;&emsp;&emsp;Click here ➡️ 
+<a href="https://vscode.dev/redirect?url=vscode://ms-vscode-remote.remote-containers/cloneInVolume?url=https://github.com/skillrepos/aia-day1">
+  <img src="https://img.shields.io/static/v1?label=Dev%20Containers&message=Open&color=blue&style=for-the-badge"
+       alt="Open in Dev Containers" height="48">    
+</a>     
+
+<br>
+
+**Alternative steps - only needed if clicking the button in step 5 didn't work.**
+
+a. Use Git to clone this repository down to your machine with a command like the following.**
 
 ```
 git clone https://github.com/skillrepos/<repo-name>
@@ -68,7 +85,7 @@ git clone https://github.com/skillrepos/<repo-name>
 
 <br><br>
 
-**6. Open up the cloned project in VS Code.** 
+b. Open up the cloned project in VS Code.** 
 
 There are multiple ways to do this: 
 - You can drag and drop the project directory onto VS Code.
@@ -82,7 +99,7 @@ code .
 
 <br><br>
 
-**7. Once you open the folder/project in VS Code, VS Code should detect the devcontainer setup and prompt you about running it as a development container (usually in lower right corner). Click on "Reopen in Container".** 
+**6. Once you open the folder/project in VS Code, VS Code should detect the devcontainer setup and prompt you about running it as a development container (usually in lower right corner). Click on "Reopen in Container".** 
 
 <br>
 
@@ -97,7 +114,7 @@ code .
 <br><br>
 
 
-**8. Allow the setup processing to run automatically. (May take up to 10 minutes for some projects).**
+**7. Allow the setup processing to run automatically. (May take several minutes for some projects).**
 
 <br>
 
@@ -105,23 +122,7 @@ code .
 
 <br><br>
 
-**9. When the processing is done, you'll see a message like "Done. Press any key to close the terminal."**
-
-<br>
-
-![Done](./images/local-8.png?raw=true "Done")
-
-<br><br>
-
-**10. Once you hit a key, that terminal will go away. To get a new terminal, you can either drag up from the bottom or use the *Terminal* -> *New terminal* command from the VS Code menu.**
-
-<br>
-
-![Terminal](./images/local-9.png?raw=true "terminal")
-
-<br><br>
-
-**11. You are now ready to run the labs in your local environment!**
+**8. When the processing is done, you are ready to run the labs in your local environment!**
 
 <br><br>
 
