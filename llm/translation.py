@@ -6,7 +6,7 @@ model_name = 'Helsinki-NLP/opus-mt-en-fr'
 # Get the tokenizer
 tokenizer = MarianTokenizer.from_pretrained(model_name)
 # Instantiate the model
-model = MarianMTModel.from_pretrained(model_name)
+model = MarianMTModel.from_pretrained(model_name, use_safetensors=True )
 
 english_texts = [
      "Honey never spoils. Archaeologists have found pots of honey in ancient Egyptian tombs that are over 3,000 years old and still perfectly edible.",
