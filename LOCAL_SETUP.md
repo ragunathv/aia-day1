@@ -77,7 +77,7 @@ If this doesn't work, you can do the alternative steps below.
 
 **Alternative steps - only needed if clicking the button in step 5 didn't work.**
 
-a. Use Git to clone this repository down to your machine with a command like the following.**
+a. Use Git to clone this repository down to your machine with a command like the following.
 
 ```
 git clone https://github.com/skillrepos/<repo-name>
@@ -85,7 +85,7 @@ git clone https://github.com/skillrepos/<repo-name>
 
 <br><br>
 
-b. Open up the cloned project in VS Code.** 
+b. Open up the cloned project in VS Code. 
 
 There are multiple ways to do this: 
 - You can drag and drop the project directory onto VS Code.
@@ -99,7 +99,7 @@ code .
 
 <br><br>
 
-**6. Once you open the folder/project in VS Code, VS Code should detect the devcontainer setup and prompt you about running it as a development container (usually in lower right corner). Click on "Reopen in Container".** 
+c. Once you open the folder/project in VS Code, VS Code should detect the devcontainer setup and prompt you about running it as a development container (usually in lower right corner). Click on "Reopen in Container".
 
 <br>
 
@@ -107,7 +107,7 @@ code .
 
 <br>
 
-**If you get a popup about "Not all host requirements in devcontainer.json are met by the Docker daemon", you can just click *Continue* and it will probably still be fine.**
+d. If you get a popup about "Not all host requirements in devcontainer.json are met by the Docker daemon", you can just click *Continue* and it will probably still be fine.
 
 ![Host requirements](./images/local-6.png?raw=true "Host requirements")
 
