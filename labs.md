@@ -651,7 +651,7 @@ The answer may be ok, or it may be incomplete, without enough context. But note 
 
 <br><br>
 
-3. Change `max_context_chunks` to `10`, and save *rag_code.py*. Run again with the same question. Now there may be too much context - it may be confusing or overwhelming. It might also time out trying to reference so many sources.
+3. Change `max_context_chunks` to `10`, and save *rag_code.py*. Run again with the same question. Now there may be too much context - it may be confusing or overwhelming. It might also time out trying to reference so many sources.  **You will probably also need to change the timeout value around line 247 to be 120 seconds instead of 90.**
 
 ![Mod](./images/aia-1-51.png?raw=true "Mod")
 
