@@ -1,7 +1,7 @@
 # Enterprise AI Accelerator
 ## Day 1 - Models and Retrieval Augmented Generation (RAG)
 ## Session labs 
-## Revision 1.7 - 03/17/25
+## Revision 1.7 - 03/29/26
 
 **Follow the startup instructions in the README.md file IF NOT ALREADY DONE!**
 
@@ -115,13 +115,17 @@ code tokenizer.py
 
 <br><br>
 
-4. Now let's switch back to the codespace and, in the terminal, set up your Hugging Face token for this terminal and any future ones. Run the first command below, paste in the token you setup as part of the README.md steps and hit Enter.  You can then verify that your token is setup correctly with the second command.
+4. Now let's switch back to the codespace and, in the terminal, set up your Hugging Face token for this terminal and any future ones. Run the first command below. This will prompt you for your token value. Paste in the token you setup as part of the README.md steps and hit Enter.  You can then verify that your token is setup correctly with the second command.
 
 ```
 read -p "HF Token: " HF_TOKEN && export HF_TOKEN && grep -qxF "export HF_TOKEN=$HF_TOKEN" ~/.bashrc || echo "export HF_TOKEN=$HF_TOKEN" >> ~/.bashrc
 
 echo $HF_TOKEN
 ```
+
+
+![setting token](./images/aia-1-71.png?raw=true "setting token")
+
 
 <br><br>
   
