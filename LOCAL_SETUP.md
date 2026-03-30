@@ -114,7 +114,7 @@ d. If you get a popup about "Not all host requirements in devcontainer.json are 
 <br><br>
 
 
-**7. Allow the setup processing to run automatically. (May take several minutes for some projects).**
+**6. Allow the setup processing to run automatically. (May take several minutes for some projects).**
 
 <br>
 
@@ -122,7 +122,7 @@ d. If you get a popup about "Not all host requirements in devcontainer.json are 
 
 <br><br>
 
-**8. When the processing is done, you are ready to run the labs in your local environment!**
+**7. When the processing is done, you are ready to run the labs in your local environment!**
 
 <br><br>
 
